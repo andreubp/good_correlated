@@ -27,11 +27,7 @@
 
 import argparse
 import sys
-import os
-from modules.blast import *
-from modules.clustalw import *
-from modules.mutual_information import *
-from modules.parse_config import *
+from modules import *
 
 parser = argparse.ArgumentParser(description="Correlated mutations")
 

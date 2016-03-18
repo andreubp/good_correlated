@@ -136,7 +136,9 @@ def check_arguments():
 	elif args.multifasta_2 and not args.multifasta_1:
 			sys.stderr.write("Error: You forget to put -multifasta1 argument.\n")
 			exit(1)
-
+	elif not args.multifasta_1:
+			sys.stderr.write("Error: You does not put any argument.\n \t Check the USAGE help (correlate -h)\n\n")
+			exit(1)
 
 def clustalw_f(multifasta1,prefix_output):
 	"""
@@ -267,6 +269,7 @@ def runCoevolution():
 		mi_two_f(module1, module2, prefix_output, prefix)
 
 if __name__ == "__main__":
+
 	check_dependencies()
 	check_arguments()
 	sys.stderr.write("\n\t\t CORRELATED MUTATIONS TOOL\n\n")
